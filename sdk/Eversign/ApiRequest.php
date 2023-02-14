@@ -30,6 +30,7 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\TransferStats;
 use JMS\Serializer\SerializerBuilder;
 
+#[\AllowDynamicProperties]
 class ApiRequest {
 
     private $apiBaseUrl;
@@ -222,7 +223,7 @@ class ApiRequest {
             ];
 
             try {
-                $requestOptions['json'] = json_decode($this->payLoad);
+                $requestOptions['json'] = json_decode($this->payLoad ?? '');
             } catch (\Exception $e) {
                 $requestOptions['body'] = $this->payLoad;
             }
