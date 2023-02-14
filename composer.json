@@ -1,5 +1,5 @@
 {
-    "name": "eversign/eversign-php-sdk",
+    "name": "sebasvdonk/eversign-php-sdk",
     "description": "The official PHP SDK Wrapper for the Eversign API",
     "authors": [
         {
